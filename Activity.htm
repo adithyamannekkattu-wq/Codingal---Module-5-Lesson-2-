@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>
+        Game Profile
+    </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="s1" id="name">Name: </div>
+        <div class="s2" id="score">Score: </div>
+        <div class="s3" id="rank">Rank: </div>
+        <div class="s4" id="greeting">Greeting: </div>
+        <div class="s5" id="stars">Stars: </div>
+        <div class="s6" id="null">Null: </div>
+        <div class="s7" id="undefined">Undefined: </div>
+
+    </div>
+
+    <button onclick="ho()">
+        Show
+    </button>
+
+
+    <script>
+
+        function ho() {
+            var score = Math.floor(Math.random() * 100);
+            if (score > 75) {
+                document.getElementById("rank").innerHTML = "gold";
+            }
+            else {
+                document.getElementById("rank").innerHTML = "silver";
+            }
+
+            let name="Adithya"
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("score").innerHTML = score;
+
+            var hour = new Date.gethours();
+            if (hours < 12) {
+                document.getElementById("greeting").innerHTML = "Good morning!";
+            }
+            else {
+                document.getElementById("greeting").innerHTML = "Good afternoon!!";
+            }
+
+            let count = 0;
+            while (count < 7) {
+                document.getElementById("stars").innerHTML = "*";
+                count += 1
+            }
+
+            let num = null
+            document.getElementById("null").innerHTML = null;
+
+            let num1 = undefined
+            document.getElementById("undefined").innerHTML = undefined;
+        }
+
+    </script>
+
+</body>
+
+</html>
