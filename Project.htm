@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+            Birthday scheduler
+        </title>
+
+        <style>
+
+            .container{
+                background-color: rgb(241, 72, 72);
+                color:aliceblue;
+                text-align:center;
+                margin:60px;
+            }
+
+            button{
+                color:aliceblue;
+                background-color: blue;
+                margin: 10px;
+            }
+
+            h1{
+                color:rgb(0, 149, 255);
+                text-align:center;
+            }
+
+            body{
+                background: linear-gradient(rgba(246, 169, 153, 0.948), rgba(239, 208, 195, 0.942));
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Birthday Card</h1>
+
+        <div class="container">
+
+            <img height="170px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpy8fSabmG_TcZLtTTiedr81bYgG0DdIkT2lpRKLgl5Q&s=10"><br>
+
+            <span id="s1">Name: </span> <span id="v1"></span><br><br>
+            <span id="s2">Birthday Date: </span> <span id="v2"></span><br><br>
+            <span id="s3">Time: </span> <span id="v3"></span><br><br>
+            <span id="s5"></span> <span id="v5"></span><br><br>
+            <span id="s6"></span> <span id="v6"></span><br><br>
+
+        </div>
+
+        <button onclick="ck()">Show Details</button>
+
+        <script>
+
+            
+        function ck() {
+
+            let name="  Adithya";
+            document.getElementById("v1").innerHTML = name;
+
+
+            let hour = new Date().getHours();
+            document.getElementById("v3").innerHTML = "  "+hour;
+            
+            let day = new Date().getDate();
+            document.getElementById("v2").innerHTML = "  "+day;
+            
+
+            let num = null;
+            document.getElementById("v5").innerHTML = "  "+num;
+
+            let num1 = undefined
+            document.getElementById("v6").innerHTML = "  "+num1;
+        }
+
+        </script>
+
+    </body>
+
+</html>
